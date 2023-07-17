@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sum Total</title>
+</head>
+<body>
+<h3>Choose lga</h3>
+<select name="select_lga" id="">
+    {% for each in lga_names %}
+    <option value="{{ each }}">{{ each }}</option>
+    {% endfor %}
+</select>
+<h2>Sum of results for lga</h2>
+<h3>{{ summed }} total</h3>
+</body>
+</html>

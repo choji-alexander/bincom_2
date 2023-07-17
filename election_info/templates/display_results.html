@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+</head>
+<body>
+<h1>Polling unit Results</h1>
+<hr>
+<div>
+{% for each in pu_result %}
+<span>{{ each.polling_unit_name }}</span>
+<span>{{ each.party_abbreviation }}: {{ each.party_score }}</span>
+{% endfor %}
+</div>
+</body>
+</html>

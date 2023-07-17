@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Store Results</title>
+</head>
+<body>
+<h2>Enter info</h2>
+<form action="" method="POST">
+          {% csrf_token %}
+          <div>
+            <label for="party_abbreviation">Party abbreviation</label>
+            <input id="party_abbreviation" name="party_abbreviation" type="text" placeholder="e.g. PDP, APC, LP"/>
+          </div>
+          <div>
+            <label for="party_score">Party score</label>
+            <input id="party_score" name="party_score" type="text"/>
+          </div>
+          <div>
+            <label for="entered_by_user">Your Name</label>
+            <input id="entered_by_user" name="entered_by_user" type="text"/>
+          </div>
+          <button class="btn btn--main" type="submit">
+              OK
+          </button>
+        </form>
+</body>
+</html>
