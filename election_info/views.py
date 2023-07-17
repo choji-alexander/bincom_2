@@ -4,10 +4,12 @@ from .forms import PuResultsCreationForm
 
 
 def homepage(request):
+    # renders homepage.html
     return render(request, 'homepage.html')
 
 
 def display_result(request):
+    # display the result for any individual polling unit
     polling_units = Polling_unit.objects.all()
     pu_result = []
     for each in polling_units:
@@ -19,6 +21,7 @@ def display_result(request):
 
 
 def sum_pu_lga(request):
+    # display summed total result of any individual polling unit
     lga = Lga.objects.all()
     lga_names = []
     lga_polling_units = ''
@@ -36,6 +39,7 @@ def sum_pu_lga(request):
 
 
 def store_results(request):
+    # store result for all parties for a new polling unit
     form = PuResultsCreationForm()
     if request.method == 'POST':
         form = PuResultsCreationForm(request.POST)

@@ -5,5 +5,5 @@ from .models import Announced_pu_results
 class PuResultsCreationForm(ModelForm):
     class Meta:
         model = Announced_pu_results
-        fields = ['party_abbreviation', 'party_score', 'entered_by_user']
+        fields = ['party_abbreviation', 'party_score', 'entered_by_user', 'polling_unit_uniqueid']
 
